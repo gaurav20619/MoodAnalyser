@@ -17,5 +17,11 @@ public class MoodAnalyzerTest {
         String mood1 = moodAnalyzer.analyseMood("I am in happy mood");
         Assert.assertEquals(mood1, "HAPPY");
     }
+    @Test
+    public void testMoodAnalysis_whenMoodIsNull() { //tc 2.1
+        MoodAnalyzer moodAnalyzer = new MoodAnalyzer(null);
+        String mood2 = moodAnalyzer.analyseMood();
+        Assert.assertEquals(mood2,"HAPPY");
+    }
 }
 
